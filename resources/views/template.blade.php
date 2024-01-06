@@ -14,13 +14,11 @@
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.css')}}">
     <link rel="stylesheet" href="{{ asset('css/main.css')}}">
     <link rel="stylesheet" href="{{ asset('css/perfil.css')}}">
-</head>
-<body>
-    
 
 
 
-@include('sweetalert::alert')
+
+    @include('sweetalert::alert')
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/Chart.min.js')}}"></script>
     <script src="{{asset('js/dynamic-pie-chart.js')}}"></script>

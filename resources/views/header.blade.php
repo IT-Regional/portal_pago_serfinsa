@@ -19,7 +19,7 @@
                     <div class="profile-info">
                       <div class="info">
                         <div class="image">
-                          <img src="{{ asset('images/profile/profile-image.png')}}" alt="">
+                          <img src="{{ asset('images/perfil.png')}}" alt="">
                         </div>
                         <div>
                           <h6 class="fw-500">Nombre de usuario</h6>
