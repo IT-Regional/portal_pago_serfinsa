@@ -1,138 +1,5 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Portal de Pago</title>
-        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
-        <link href='#' rel='stylesheet'>
-        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-        <style>
-            ::-webkit-scrollbar {
-                width: 8px;
-            }
-            /* Track */
-            ::-webkit-scrollbar-track {
-                background: #f1f1f1; 
-            }
-                
-            /* Handle */
-            ::-webkit-scrollbar-thumb {
-                background: #888; 
-            }
-            
-            /* Handle on hover */
-            ::-webkit-scrollbar-thumb:hover {
-                background: #555; 
-            }
-            .heading{
-                font-size: 40px;
-                margin-top: 35px;
-                margin-bottom: 30px;
-                padding-left: 20px
-            }
-            .card{
-                border-radius: 10px !important;
-                margin-top: 60px;
-                margin-bottom: 60px
-            }
-            .form-card{
-                margin-left: 20px;
-                margin-right: 20px
-            }
-            .form-card input, .form-card textarea{
-                padding: 10px 15px 5px 15px;
-                border: none;
-                border: 1px solid lightgrey;
-                border-radius: 6px;
-                margin-bottom: 25px;
-                margin-top: 2px;
-                width: 100%;
-                box-sizing: border-box;
-                font-family: arial;
-                color: #2C3E50;
-                font-size: 14px;
-                letter-spacing: 1px
-            }
-            .form-card input:focus, .form-card textarea:focus{
-                -moz-box-shadow: 0px 0px 0px 1.5px skyblue !important;
-                -webkit-box-shadow: 0px 0px 0px 1.5px skyblue !important;
-                box-shadow: 0px 0px 0px 1.5px skyblue !important;
-                font-weight: bold;
-                border: 1px solid #304FFE;
-                outline-width: 0
-            }
-            .input-group{
-                position:relative;
-                width:100%;
-                overflow:hidden
-            }
-            .input-group input{
-                position:relative;
-                height:80px;
-                margin-left: 1px;
-                margin-right: 1px;
-                border-radius:6px;
-                padding-top: 30px;
-                padding-left: 25px
-            }
-            .input-group label{
-                position:absolute;
-                height: 24px;
-                background: none;
-                border-radius: 6px;
-                line-height: 48px;
-                font-size: 15px;
-                color: gray;
-                width:100%;
-                font-weight:100;
-                padding-left: 25px
-            }
-            input:focus + label{
-                color: #304FFE
-            }.btn-pay{
-                background-color: #304FFE;
-                height: 60px;
-                color: #ffffff !important;
-                font-weight: bold
-            }
-            .btn-pay:hover{
-                background-color: #3F51B5
-            }
-            .fit-image{
-                width: 100%;
-                object-fit: cover
-            }
-            img{
-                border-radius: 5px
-            }
-            .radio-group{
-                position: relative;
-                margin-bottom: 25px
-            }
-            .radio{
-                display:inline-block;
-                border-radius: 6px;
-                box-sizing: border-box;
-                border: 2px solid lightgrey;
-                cursor:pointer;
-                margin: 12px 25px 12px 0px
-            }
-            .radio:hover{
-                box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2)
-            }
-            .radio.selected{
-                box-shadow: 0px 0px 0px 1px rgba(0, 0, 155, 0.4);
-                border: 2px solid blue
-            }
-            .label-radio{
-                font-weight: bold;
-                color: #000000
-            }
-        </style>
-    </head>
-
-    <body className='snippet-body'>
+@include('template')
+<body className='snippet-body'>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class=" col-lg-6 col-md-8">
@@ -147,13 +14,13 @@
                         @csrf
                             <div class="row justify-content-center mb-4 radio-group">
                                 <div class="col-sm-3 col-5">
-                                    <div class='radio mx-auto' data-value="master" style="cursor: default;"> <img class="fit-image" src="Mastercard_2019_logo.svg.png" width="105px" height="55px"> </div>
+                                    <div class='radio mx-auto' data-value="master" style="cursor: default;"> <img class="fit-image" src="{{asset('images/Mastercard_2019_logo.svg.png')}}" width="105px" height="55px"> </div>
                                 </div>
                                 <div class="col-sm-3 col-5">
-                                    <div class='radio mx-auto' data-value="visa" style="cursor: default;"> <img class="fit-image" src="https://i.imgur.com/OdxcctP.jpg" width="105px" height="55px"> </div>
+                                    <div class='radio mx-auto' data-value="visa" style="cursor: default;"> <img class="fit-image" src="{{asset('images/visa.jpg')}}" width="105px" height="55px"> </div>
                                 </div>
                                 <div class="col-sm-3 col-5">
-                                    <div class='radio mx-auto' data-value="dk" style="cursor: default;"> <img class="fit-image" src="UNION PAY LOGO.png" width="105px" height="55px"> </div>
+                                    <div class='radio mx-auto' data-value="dk" style="cursor: default;"> <img class="fit-image" src="{{asset('images/UNION PAY LOGO.png')}}" width="105px" height="55px"> </div>
                                 </div> <br>
                             </div>
                             <div class="row justify-content-center">
@@ -203,12 +70,13 @@
                 </div>
             </div>
         </div>
-        <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+        @include('footer')
+        {{-- <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
         <script type='text/javascript' src='#'></script>
         <script type='text/javascript' src='#'></script>
-        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script> --}}
 
-        <script type='text/javascript'>
+  {{--       <script type='text/javascript'>
 
             $(document).ready(function(){
 
@@ -272,6 +140,5 @@
             myLink.addEventListener('click', function(e) {
                 e.preventDefault();
             });
-        </script>
+        </script> --}}
     </body>
-</html>

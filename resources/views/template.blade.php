@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.css')}}">
     <link rel="stylesheet" href="{{ asset('css/main.css')}}">
     <link rel="stylesheet" href="{{ asset('css/perfil.css')}}">
+    <link rel="stylesheet" href="{{asset('css/checkout.css')}}">
 
 
 
@@ -28,6 +29,8 @@
     <script src="{{asset('js/world-merc.js')}}"></script>
     <script src="{{asset('js/polyfill.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/facturas.js')}}" defer></script>
+    <script src="{{asset('js/checkout.js')}}" defer></script>
     
 </body>
 </html>

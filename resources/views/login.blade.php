@@ -22,7 +22,7 @@
     <main class="main-wrapper">
       <!-- ========== section start ========== -->
       <section class="signin-section">
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding-left: 0px; padding-right: 20%">
           <!-- ========== title-wrapper start ========== -->
           <br>
           <!-- ========== title-wrapper end ========== -->
