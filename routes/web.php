@@ -33,5 +33,5 @@ Route::get('/pdfinvoices', [CustomerController::class, 'download'])->name('pdfin
 //muestra perfil del usuario
 Route::get('/profile', [CustomerController::class, 'profile'])-> name('profile');
 //cerrar sesión
-Route::get('/logout', [CustomerController::class, 'logout']) -> name('logout');
+Route::get('logout', [LoginController::class, 'logout']) -> name('logout');
 
